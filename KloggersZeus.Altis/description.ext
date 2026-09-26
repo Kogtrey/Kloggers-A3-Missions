@@ -1,0 +1,77 @@
+#ifndef _SUB
+	//--- Unique for every mission variant
+	onLoadName = $STR_A3_moduleMPTypeGameMaster_onLoadName_Altis;
+	overviewPicture = \a3\Missions_F_curator\data\img\mp_zgm_m11_overview_ca.paa;
+#endif
+
+dev = "Kloggers";
+author = $STR_A3_Bohemia_Interactive;
+//onLoadMission = "";
+overviewText = $STR_A3_moduleMPTypeGameMaster_overviewText;
+overviewTextLocked = "";
+
+respawn = 3;
+respawnDelay = 5;
+respawnVehicleDelay = 5;
+respawnOnStart = 1;
+respawnTemplates[] = {"MenuPosition","MenuInventory","Tickets"};
+respawnTemplatesVirtual[] = {};
+
+disabledAI = 1;
+joinUnassigned = 1;
+aiKills  = 1;
+
+class Header
+{
+	gameType = Zeus;
+	minPlayers = 1;
+	#ifdef _PARAMTYPE
+		maxPlayers = 18;
+	#else
+		maxPlayers = 50;
+	#endif
+};
+
+class Params
+{
+	class CuratorGodMode
+	{
+		title = $STR_A3_MP_ZGM_m11.Altis_Params_CuratorUnlock;
+		values[] = {0,1};
+		texts[] = {$STR_DISABLED,$STR_ENABLED};
+		default = 0;
+	};
+	class CuratorModeratorRights
+	{
+		title = $STR_A3_MP_ZGM_m11.Altis_Params_CuratorModeratorRights;
+		values[] = {-1,0,1,2};
+		texts[] = {
+			$STR_A3_MP_ZGM_m11.Altis_Params_CuratorModeratorRights_3,
+			$STR_A3_MP_ZGM_m11.Altis_Params_CuratorModeratorRights_0,
+			$STR_A3_MP_ZGM_m11.Altis_Params_CuratorModeratorRights_1,
+			$STR_A3_MP_ZGM_m11.Altis_Params_CuratorModeratorRights_2
+		};
+		default = 0;
+	};
+#ifdef _PARAMTYPE
+	class Type
+	{
+		title = $STR_DISP_ARCGRP_TYPE;
+		values[] = {0,1};
+		texts[] = {$STR_A3_CfgMPGameTypes_Coop_name_0,$STR_A3_CfgMPGameTypes_DM_name_0};
+		default = 0;
+		isGlobal = 1;
+		file = "paramType.sqf";
+	};
+#endif
+	class PlayerEditingAreaSize
+	{
+		title = $STR_A3_MP_ZGM_m11.Altis_Params_PlayerEditingAreaSize;
+		values[] = {0,100,200,500,1000};
+		texts[] = {0,100,200,500,1000};
+		default = 0;
+	};
+	#include "\a3\functions_f\Params\paramGuerFriendly.inc"
+	#include "\a3\functions_f\Params\paramDebugConsole.inc"
+	#include "\a3\functions_f\params\paramRevive.inc"
+};

@@ -1,0 +1,5 @@
+respawn = 3;
+respawnDelay = 3;
+respawnOnStart = -1;
+respawnTemplates[] = {"MenuPosition","MenuInventory"};
+disabledAI = 1;
