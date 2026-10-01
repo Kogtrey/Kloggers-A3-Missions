@@ -1,0 +1,4 @@
+{
+    "a3ServerHost": "example.host.com",
+    "serverWorkingDirectory": "/server_path_to_arma3_directory"
+}

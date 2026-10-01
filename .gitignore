@@ -2,3 +2,5 @@ backup
 
 *.pbo
 *.bak
+
+config.json
