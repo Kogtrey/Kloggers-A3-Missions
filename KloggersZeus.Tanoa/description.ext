@@ -11,7 +11,6 @@ overviewTextLocked = "";
 respawn = 2;
 respawnDelay = 5;
 respawnVehicleDelay = 5;
-respawnOnStart = 1;
 respawnTemplates[] = {"MenuPosition","MenuInventory","Tickets"};
 respawnTemplatesVirtual[] = {};
 

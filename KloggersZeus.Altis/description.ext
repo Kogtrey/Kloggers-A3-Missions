@@ -8,10 +8,9 @@ author = $STR_A3_Bohemia_Interactive;
 overviewText = $STR_A3_moduleMPTypeGameMaster_overviewText;
 overviewTextLocked = "";
 
-respawn = 3;
+respawn = 2;
 respawnDelay = 5;
 respawnVehicleDelay = 5;
-respawnOnStart = 1;
 respawnTemplates[] = {"MenuPosition","MenuInventory","Tickets"};
 respawnTemplatesVirtual[] = {};
 
