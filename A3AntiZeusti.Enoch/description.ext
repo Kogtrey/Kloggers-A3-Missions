@@ -32,3 +32,14 @@ class Params
 	#include "\a3\functions_f\Params\paramDebugConsole.inc"
 	#include "\a3\functions_f\params\paramRevive.inc"
 };
+
+class CfgPatches
+{
+	class jsrs2025_compat_cup_weapons
+	{
+		units[] = {};
+		weapons[] = {};
+		requiredVersion = 0.1;
+		requiredAddons[] = {};
+	};
+};
